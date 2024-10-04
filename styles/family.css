@@ -1,0 +1,149 @@
+/* Reset and base styles  */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Jaldi', serif;
+    background-color: #181818;
+}
+legend {
+    display: block;
+}
+.container{
+    margin: 0 120px;
+}
+.header__user-avatar{
+    max-height: 50px;
+    max-width: 50px;
+}
+.header__user-info{
+    align-items: center;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    gap: 10px;
+}
+.header__body{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.header__navigation ul{
+    inline-size: min-content;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    gap: 40px;
+}
+.header__navigation{
+    padding: 20px 46px;
+    background-color: #2b2b2b;
+    border-radius: 15px;
+}
+body{
+    color: white;
+}
+.family-member{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #3f3f3f;
+    padding: 30px;
+    gap: 30px;
+}
+.family-members-info h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+.family-members-info h2{
+    font-size: 30px;
+    color: #7F7F7F;
+    line-height: 30px;
+}
+
+
