@@ -15,6 +15,7 @@
 
 a, a:link, a:visited  {
     text-decoration: none;
+    color: white;
 }
 
 a:hover  {
@@ -124,3 +125,31 @@ legend {
     background-color: #2b2b2b;
     border-radius: 15px;
 }
+body{
+    color: white;
+}
+.basketball__body, .hiking__body{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    column-gap: 50px;
+
+}
+.basketball__body img, .hiking__body img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.basketball__header, .hobby-info__header, .hiking__header{
+    margin: 10px 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+.hiking{
+    margin: 82px 0;
+}
+
+.hobby-info__body p{
+    font-weight: normal;
+    font-size: 25px;
+}
+
