@@ -13,11 +13,12 @@
 
 /* Links */
 
-a, a:link, a:visited  {
+a, a:link, a:visited {
     text-decoration: none;
+    color: white;
 }
 
-a:hover  {
+a:hover {
     text-decoration: none;
 }
 
@@ -84,21 +85,25 @@ label {
     cursor: pointer;
 }
 
-body{
+body {
     font-family: 'Jaldi', serif;
     background-color: #181818;
 }
+
 legend {
     display: block;
 }
-.container{
+
+.container {
     margin: 0 120px;
 }
-.header__user-avatar{
+
+.header__user-avatar {
     max-height: 50px;
     max-width: 50px;
 }
-.header__user-info{
+
+.header__user-info {
     align-items: center;
     display: flex;
     color: white;
@@ -106,12 +111,14 @@ legend {
     font-size: 32px;
     gap: 10px;
 }
-.header__body{
+
+.header__body {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
 }
-.header__navigation ul{
+
+.header__navigation ul {
     inline-size: min-content;
     color: white;
     display: flex;
@@ -119,8 +126,32 @@ legend {
     font-size: 20px;
     gap: 40px;
 }
-.header__navigation{
+
+.header__navigation {
     padding: 20px 46px;
     background-color: #2b2b2b;
     border-radius: 15px;
+}
+
+.contacts__body a {
+    display: flex;
+    gap: 20px;
+}
+.contacts__body h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.contacts__body ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: right;
+    align-items: baseline;
+}
+.contacts{
+    margin: 50px 0;
+}
+.contacts__body{
+    display: flex;
+    gap: 150px;
 }
