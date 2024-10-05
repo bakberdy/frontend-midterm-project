@@ -85,50 +85,54 @@ label {
     cursor: pointer;
 }
 
-body{
+body {
     font-family: 'Jaldi', serif;
     background-color: #181818;
+    color: white;
 }
-legend {
-    display: block;
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
 }
-.container{
-    margin: 0 120px;
-}
-.header__user-avatar{
+
+.header__user-avatar {
     max-height: 50px;
     max-width: 50px;
 }
-.header__user-info{
+
+.header__user-info {
     align-items: center;
     display: flex;
     color: white;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2rem;
     gap: 10px;
 }
-.header__body{
+
+.header__body {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
 }
-.header__navigation ul{
-    inline-size: min-content;
+
+.header__navigation ul {
     color: white;
     display: flex;
     flex-direction: row;
-    font-size: 20px;
-    gap: 40px;
+    font-size: 1.25rem;
+    gap: 20px;
 }
-.header__navigation{
-    padding: 20px 46px;
+
+.header__navigation {
+    padding: 10px 20px;
     background-color: #2b2b2b;
     border-radius: 15px;
 }
-body{
-    color: white;
-}
-.family-member{
+
+
+.family-member {
     display: flex;
     align-items: start;
     border-radius: 15px;
@@ -136,31 +140,36 @@ body{
     padding: 40px;
     gap: 30px;
 }
-.family-members-info h1{
+
+.family-members-info h1 {
     font-weight: bold;
     font-size: 40px;
 }
-.family-members-info h2{
+
+.family-members-info h2 {
     font-size: 30px;
     color: #7F7F7F;
     line-height: 40px;
 }
 
-.family-members__header, .family-gallery__header{
+.family-members__header, .family-gallery__header {
     margin: 10px 0;
     font-size: 32px;
     font-weight: bold;
 }
-.family-members__body{
+
+.family-members__body {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
-.family-gallery{
+
+.family-gallery {
     margin-top: 50px;
     margin-left: 120px;
     margin-bottom: 120px;
 }
+
 .family-gallery__body {
     display: flex;
     max-height: 400px;
@@ -185,3 +194,63 @@ body{
     display: block;
 }
 
+@media (max-width: 768px) {
+    .header__body {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header__navigation ul {
+        gap: 10px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .family-members-info h1 {
+        font-size: 30px;
+    }
+
+    .family-members-info h2 {
+        font-size: 20px;
+    }
+
+
+    .family-gallery {
+        margin-left: 20px;
+    }
+
+    .family-gallery__body {
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header__body {
+        padding: 60px 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .family-members-info h1 {
+        font-size: 36px;
+    }
+
+    .family-members-info h2 {
+        font-size: 28px;
+    }
+
+    .family-gallery {
+        margin-left: 80px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    .family-gallery__body {
+        gap: 40px;
+    }
+}

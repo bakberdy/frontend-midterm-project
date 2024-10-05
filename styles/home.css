@@ -1,4 +1,3 @@
-/* Reset and base styles  */
 * {
     padding: 0px;
     margin: 0px;
@@ -11,8 +10,6 @@
     box-sizing: border-box;
 }
 
-/* Links */
-
 a, a:link, a:visited  {
     color: white;
     text-decoration: none;
@@ -21,8 +18,6 @@ a, a:link, a:visited  {
 a:hover  {
     text-decoration: none;
 }
-
-/* Common */
 
 aside, nav, footer, header, section, main {
     display: block;
@@ -49,8 +44,6 @@ img, svg {
 address {
     font-style: normal;
 }
-
-/* Form */
 
 input, textarea, button, select {
     font-family: inherit;
@@ -85,81 +78,187 @@ label {
     cursor: pointer;
 }
 
-body{
+body {
     font-family: 'Jaldi', serif;
     background-color: #181818;
+    margin: 0;
+    padding: 0;
 }
+
 legend {
     display: block;
 }
-.container{
-    margin: 0 120px;
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
 }
-.header__user-avatar{
+
+.header__user-avatar {
     max-height: 50px;
     max-width: 50px;
 }
-.header__user-info{
+
+.header__user-info {
     align-items: center;
     display: flex;
     color: white;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2rem;
     gap: 10px;
 }
-.header__body{
+
+.header__body {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
 }
-.header__navigation ul{
-    inline-size: min-content;
+
+.header__navigation ul {
     color: white;
     display: flex;
     flex-direction: row;
-    font-size: 20px;
-    gap: 40px;
+    font-size: 1.25rem;
+    gap: 20px;
 }
-.header__navigation{
-    padding: 20px 46px;
+
+.header__navigation {
+    padding: 10px 20px;
     background-color: #2b2b2b;
     border-radius: 15px;
 }
-.intro__user-body{
-    padding: 120px 0;
+
+.intro__user-body {
+    padding: 80px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 400px;
+    gap: 40px;
 }
-.intro__left-side h1{
-    font-size: 45px;
+
+.intro__left-side h1 {
+    font-size: 2.5rem;
     color: white;
-    line-height: 50px;
+    line-height: 1.2;
 }
-.intro__left-side .profession{
+
+.intro__left-side .profession {
     color: #6E6E6E;
 }
-.projects__body{
+
+.projects__body {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 150px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 100px;
 }
-.project{
-    min-width: 325px;
+
+.project {
+    flex: 1 1 300px;
+    max-width: 500px;
     color: white;
-    font-size: 30px;
-    padding: 40px 40px;
+    font-size: 1.5rem;
+    padding: 20px;
     background-color: #2b2b2b;
     border-radius: 15px;
 }
-.blue-text{
+
+.blue-text {
     color: blue;
 }
-.projects__header{
+
+.projects__header {
     margin: 15px 0;
     color: white;
-    font-size: 30px;
+    font-size: 1.75rem;
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    .header__body {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header__navigation ul {
+        gap: 10px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .intro__user-body {
+        padding: 40px 0;
+        gap: 20px;
+    }
+
+    .intro__left-side h1 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .projects__body {
+        gap: 10px;
+    }
+
+    .project {
+        flex: 1 1 90%;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header__body {
+        padding: 60px 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .intro .name{
+        font-size: 100px;
+    }
+
+    .projects__header{
+        font-size: 60px;
+    }
+    .projects__body {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 120px;
+    }
+
+    .project {
+        min-height: 300px;
+        min-width: 100%;
+        width: max-content;
+        flex-direction: column;
+        flex: 1 1 100%;
+        font-size: 60px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    .intro__user-body {
+        gap: 400px;
+    }
+
+    .projects__body {
+        margin-bottom: 150px;
+    }
+
+    .project {
+        flex: 1 1 325px;
+        font-size: 1.75rem;
+    }
+}
+

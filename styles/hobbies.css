@@ -1,4 +1,3 @@
-/* Reset and base styles  */
 * {
     padding: 0px;
     margin: 0px;
@@ -11,18 +10,17 @@
     box-sizing: border-box;
 }
 
-/* Links */
-
-a, a:link, a:visited  {
+a, a:link, a:visited {
     text-decoration: none;
     color: white;
 }
-
-a:hover  {
-    text-decoration: none;
+body{
+    color: white;
 }
 
-/* Common */
+a:hover {
+    text-decoration: none;
+}
 
 aside, nav, footer, header, section, main {
     display: block;
@@ -49,8 +47,6 @@ img, svg {
 address {
     font-style: normal;
 }
-
-/* Form */
 
 input, textarea, button, select {
     font-family: inherit;
@@ -85,71 +81,125 @@ label {
     cursor: pointer;
 }
 
-body{
+body {
     font-family: 'Jaldi', serif;
     background-color: #181818;
 }
+
 legend {
     display: block;
 }
-.container{
-    margin: 0 120px;
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
 }
-.header__user-avatar{
+
+.header__user-avatar {
     max-height: 50px;
     max-width: 50px;
 }
-.header__user-info{
+
+.header__user-info {
     align-items: center;
     display: flex;
     color: white;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2rem;
     gap: 10px;
 }
-.header__body{
+
+.header__body {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
 }
-.header__navigation ul{
-    inline-size: min-content;
+
+.header__navigation ul {
     color: white;
     display: flex;
     flex-direction: row;
-    font-size: 20px;
-    gap: 40px;
+    font-size: 1.25rem;
+    gap: 20px;
 }
-.header__navigation{
-    padding: 20px 46px;
+
+.header__navigation {
+    padding: 10px 20px;
     background-color: #2b2b2b;
     border-radius: 15px;
 }
-body{
-    color: white;
-}
-.basketball__body, .hiking__body{
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    column-gap: 50px;
 
+.basketball__body, .hiking__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 50px;
+    row-gap: 30px;
 }
-.basketball__body img, .hiking__body img{
+
+.basketball__body img, .hiking__body img {
     height: 300px;
     width: 100%;
     object-fit: cover;
 }
-.basketball__header, .hobby-info__header, .hiking__header{
+
+.basketball__header, .hobby-info__header, .hiking__header {
     margin: 10px 0;
     font-size: 32px;
     font-weight: bold;
 }
-.hiking{
+
+.hiking {
     margin: 82px 0;
 }
 
-.hobby-info__body p{
+.hobby-info__body p {
     font-weight: normal;
     font-size: 25px;
 }
 
+@media (max-width: 1024px) {
+    .header__user-info {
+        font-size: 1.5rem;
+    }
+
+    .header__navigation ul {
+        font-size: 1rem;
+    }
+
+    .basketball__header, .hobby-info__header, .hiking__header {
+        font-size: 28px;
+    }
+
+    .hobby-info__body p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__user-info {
+        font-size: 1.25rem;
+    }
+
+    .header__body {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .basketball__body, .hiking__body {
+        grid-template-columns: 1fr;
+    }
+
+    .basketball__body img, .hiking__body img {
+        height: 200px;
+    }
+
+    .basketball__header, .hobby-info__header, .hiking__header {
+        font-size: 24px;
+    }
+
+    .hobby-info__body p {
+        font-size: 18px;
+    }
+}

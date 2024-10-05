@@ -94,8 +94,11 @@ legend {
     display: block;
 }
 
+
 .container {
-    margin: 0 120px;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
 }
 
 .header__user-avatar {
@@ -108,7 +111,7 @@ legend {
     display: flex;
     color: white;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2rem;
     gap: 10px;
 }
 
@@ -119,6 +122,38 @@ legend {
 }
 
 .header__navigation ul {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25rem;
+    gap: 20px;
+}
+
+.header__navigation {
+    padding: 10px 20px;
+    background-color: #2b2b2b;
+    border-radius: 15px;
+}
+
+
+.header__user-avatar{
+    max-height: 50px;
+    max-width: 50px;
+}
+.header__user-info{
+    align-items: center;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    gap: 10px;
+}
+.header__body{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.header__navigation ul{
     inline-size: min-content;
     color: white;
     display: flex;
@@ -126,13 +161,11 @@ legend {
     font-size: 20px;
     gap: 40px;
 }
-
-.header__navigation {
+.header__navigation{
     padding: 20px 46px;
     background-color: #2b2b2b;
     border-radius: 15px;
 }
-
 .contacts__body a {
     display: flex;
     gap: 20px;
