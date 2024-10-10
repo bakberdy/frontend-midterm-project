@@ -10,12 +10,12 @@
     box-sizing: border-box;
 }
 
-a, a:link, a:visited  {
+a, a:link, a:visited {
     color: white;
     text-decoration: none;
 }
 
-a:hover  {
+a:hover {
     text-decoration: none;
 }
 
@@ -95,6 +95,7 @@ legend {
     max-width: 1200px;
 }
 
+
 .header__user-avatar {
     max-height: 50px;
     max-width: 50px;
@@ -156,6 +157,11 @@ legend {
     margin-bottom: 100px;
 }
 
+.hamburger {
+    visibility: hidden;
+    display: none;
+}
+
 .project {
     flex: 1 1 300px;
     max-width: 500px;
@@ -177,54 +183,33 @@ legend {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .header__body {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .header__navigation ul {
-        gap: 10px;
-        font-size: 1rem;
-        flex-wrap: wrap;
-    }
-
-    .intro__user-body {
-        padding: 40px 0;
-        gap: 20px;
-    }
-
-    .intro__left-side h1 {
-        font-size: 1.75rem;
-        text-align: center;
-    }
-
-    .projects__body {
-        gap: 10px;
-    }
-
-    .project {
-        flex: 1 1 90%;
-        font-size: 1.2rem;
-        padding: 15px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 800px) and (max-width: 1024px) {
     .header__body {
         padding: 60px 0;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .intro .name{
+    .header__navigation {
+        height: 100px;
+        visibility: hidden;
+    }
+
+    .hamburger {
+        visibility: visible;
+        height: 50px;
+        width: 50px;
+        display: flex;
+    }
+
+    .intro .name {
         font-size: 100px;
     }
 
-    .projects__header{
+    .projects__header {
         font-size: 60px;
     }
+
     .projects__body {
         display: flex;
         flex-direction: column;
@@ -261,4 +246,43 @@ legend {
         font-size: 1.75rem;
     }
 }
+
+
+@media (max-width: 800px) {
+
+    .header__body {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        visibility: hidden;
+    }
+
+    .header__navigation ul {
+        visibility: hidden;
+        gap: 10px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .intro__user-body {
+        padding: 40px 0;
+        gap: 20px;
+    }
+
+    .intro__left-side h1 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .projects__body {
+        gap: 10px;
+    }
+
+    .project {
+        flex: 1 1 90%;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
 

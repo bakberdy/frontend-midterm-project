@@ -157,34 +157,35 @@ legend {
     font-weight: normal;
     font-size: 25px;
 }
+.hamburger{
+    display: none;
+}
 
-@media (max-width: 1024px) {
-    .header__user-info {
-        font-size: 1.5rem;
+
+@media (max-width: 800px) {
+    .header__body {
+        padding: 60px 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header__navigation {
+        height: 100px;
+        visibility: hidden;
+    }
+
+    .hamburger {
+        visibility: visible;
+        height: 50px;
+        width: 50px;
+        display: flex;
     }
 
     .header__navigation ul {
+        visibility: hidden;
+        gap: 10px;
         font-size: 1rem;
-    }
-
-    .basketball__header, .hobby-info__header, .hiking__header {
-        font-size: 28px;
-    }
-
-    .hobby-info__body p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header__user-info {
-        font-size: 1.25rem;
-    }
-
-    .header__body {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
+        flex-wrap: wrap;
     }
 
     .basketball__body, .hiking__body {
@@ -201,5 +202,31 @@ legend {
 
     .hobby-info__body p {
         font-size: 18px;
+    }
+}
+@media (max-width: 1024px) {
+    .header__body {
+        padding: 60px 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header__navigation {
+        height: 100px;
+        visibility: hidden;
+    }
+
+    .hamburger {
+        visibility: visible;
+        height: 50px;
+        width: 50px;
+        display: flex;
+    }
+
+    .header__navigation ul {
+        visibility: hidden;
+        gap: 10px;
+        font-size: 1rem;
+        flex-wrap: wrap;
     }
 }

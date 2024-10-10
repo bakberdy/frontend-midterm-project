@@ -188,3 +188,43 @@ legend {
     display: flex;
     gap: 150px;
 }
+.hamburger {
+    visibility: hidden;
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+
+    .header__body {
+        padding: 60px 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header__navigation {
+        height: 100px;
+        visibility: hidden;
+    }
+
+    .hamburger {
+        visibility: visible;
+        height: 50px;
+        width: 50px;
+        display: flex;
+    }
+
+    .header__navigation ul {
+        visibility: hidden;
+        gap: 10px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+    .contacts__body{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        margin: 0 100px;
+    }
+}
